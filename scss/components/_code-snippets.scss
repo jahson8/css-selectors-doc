@@ -1,0 +1,26 @@
+/*Code Snippet Styles
+   ========================================================================== */
+/**
+ **/
+
+.code-snippet {
+  background-color: $primary-color-light;
+  border-left: 5px solid $primary-color;
+  border-radius: $br;
+  padding-top: 1em;
+  padding-left: 2.5em;
+  margin-bottom: 4em;
+  font-weight: $font-weight--bold;
+
+  &-selector {
+    color: red;
+  }
+}
+
+.highlight {
+  background-color: $primary-color-focus;
+  font-weight: $font-weight--bold;
+  padding: 0.3em;
+  font-size: 1.1rem;
+  color: #2a3032;
+}

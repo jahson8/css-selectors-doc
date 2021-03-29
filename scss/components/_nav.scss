@@ -1,0 +1,68 @@
+/*Nav Styles
+   ========================================================================== */
+/**
+ *
+ */
+.nav {
+  background-color: $primary-color;
+  height: 55%;
+  padding-bottom: 0;
+  header {
+    border-bottom: 2px solid $complement;
+  }
+
+  &-logo {
+    margin-top: 0px;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.3rem;
+    color: $white;
+    font-family: "Train One", cursive;
+
+    span {
+      color: $accent;
+    }
+  }
+
+  & > ul {
+    overflow: auto;
+    height: 75.5%;
+  }
+
+  li {
+    ul {
+      margin-left: 1em;
+    }
+  }
+
+  a {
+    color: $white;
+    display: block;
+    padding: 10px 30px;
+    font-size: 1.15rem;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 2px solid $white;
+    }
+  }
+
+  @media (max-width: $large) and (orientation: landscape) {
+    height: 85%;
+  }
+
+  @media (min-width: $large) {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    & > ul {
+      overflow: auto;
+      height: 85%;
+    }
+  }
+}

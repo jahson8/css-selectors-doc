@@ -1,0 +1,37 @@
+.dp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4em auto;
+
+  caption {
+    font-size: 1.3rem;
+    margin-bottom: 1.3em;
+    text-transform: uppercase;
+  }
+
+  thead {
+    background-color: $primary-color;
+    color: $white;
+    text-align: left;
+
+    th {
+      padding-top: 0.8em;
+      padding-bottom: 0.8em;
+    }
+  }
+
+  tr:nth-of-type(even) {
+    background-color: $primary-color-focus;
+  }
+
+  td,
+  th {
+    border: 2px solid $gray;
+    padding: 8px;
+    text-align: left;
+  }
+
+  @media (min-width: $large) {
+    width: 85%;
+  }
+}

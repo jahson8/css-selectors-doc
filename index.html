@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors Documentation</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="md-flex">
+    <nav id="navbar" class="nav md-flex-item">
+      <header>
+        <h1 class="nav-logo">
+          <span>:</span><span>&lsqb;</span>CSS<span>&rsqb;</span>
+          <span>+</span> SELECTORS <span>&gt;</span>
+        </h1>
+      </header>
+      <ul>
+        <li><a href="#introduction" class="nav-link">Introduction</a></li>
+        <li>
+          <a href="#universal_selector" class="nav-link">Universal Selector</a>
+        </li>
+        <li>
+          <a href="#basic_selectors" class="nav-link">Basic Selectors</a>
+          <ul>
+            <li><a href="#element_selector">Element Selector</a></li>
+            <li><a href="#class_selector">Class Selector</a></li>
+            <li><a href="#id_selector">Id Selector</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#combinators" class="nav-link">Combinators</a>
+          <ul>
+            <li><a href="#descendant_selector">Descendant Selector</a></li>
+            <li><a href="#direct_child_selector">Direct Child Selector</a></li>
+            <li>
+              <a href="#adjacent_sibling_selector">Adjacent Sibling Selector</a>
+            </li>
+            <li>
+              <a href="#general_sibling_selector">General Sibling Selector</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#pseudo_selectors" class="nav-link"> Pseudo Selectors </a>
+          <ul>
+            <li><a href="#pseudo_classes">Pseudo Classes</a></li>
+            <li><a href="#pseudo_elements">Pseudo Elements</a></li>
+          </ul>
+        </li>
+        <li><a href="#references" class="nav-link">References</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc" class="main md-flex-item">
+      <div class="container">
+        <!-- Intro Section -->
+        <section class="main-section" id="introduction">
+          <header>
+            <h2>Introduction</h2>
+          </header>
+          <p>
+            Cascading Style Sheets &#40;CSS&#41; is a stylesheet language used
+            to describe the presentation of a document written in HTML or XML.
+            CSS describes how elements should be rendered on screen, on paper,
+            in speech, or on other media. It is one the core languages of the
+            web and is standardized across Web browsers according to W3C
+            specifications.
+          </p>
+          <p>
+            In order for one to add styling to an element of a web page; it must
+            be targeted by a CSS Selector. A CSS selector defines which
+            element&#40;s&#41; to target and the set of CSS rules to apply. This
+            documentation gives a general overview of the different types of CSS
+            selectors.
+          </p>
+        </section>
+
+        <!-- Universal Selector -->
+        <section class="main-section" id="universal_selector">
+          <header>
+            <h2>Universal Selector</h2>
+          </header>
+          <p>
+            The CSS universal selector &#40;
+            <span class="highlight">&#42;</span> &#41; selects all elements on a
+            webpage.
+          </p>
+          <p>
+            The <span class="highlight">&#42;</span> selector can also select
+            all elements inside another element.
+          </p>
+          <h4>Syntax</h4>
+
+          <pre class="code-snippet">
+              <code >
+<span class="code-snippet-selector">*</span> { 
+  css declarations; 
+} 
+
+<span class="code-snippet-selector">selector *</span> {
+    css declarations;
+}
+              </code>
+            </pre>
+        </section>
+
+        <!-- Basic Selector Section -->
+        <section class="main-section" id="basic_selectors">
+          <header>
+            <h2>Basic Selectors</h2>
+          </header>
+          <p>
+            Basic Selectors are usually the first set of selectors a student
+            usually learns. These are:
+          </p>
+          <ul>
+            <li><a href="#tag_selector">Element Selector</a></li>
+            <li><a href="#class_selector">Class Selector</a></li>
+            <li><a href="#id_selector">ID Selector</a></li>
+          </ul>
+          <section id="element_selector">
+            <h3>Element Selector</h3>
+            <p>
+              The CSS Element Selector matches elements by node name. In other
+              words, it selects all elements of the given type within a
+              document.
+            </p>
+            <h4>Syntax</h4>
+            <pre class="code-snippet">
+              <code>
+<span class="code-snippet-selector">h1</span> { 
+  css declarations; 
+} 
+              </code>
+            </pre>
+          </section>
+          <section id="class_selector">
+            <h3>Class Selector</h3>
+            <p>
+              The class selector selects HTML elements with a specific class
+              attribute. To select elements with a specific class, write a
+              period &#40;
+              <span class="highlight">.</span> &#41; character, followed by the
+              class name.
+            </p>
+            <h4>Syntax</h4>
+            <pre class="code-snippet">
+              <code>
+<span class="code-snippet-selector">.classname</span> { 
+  css declarations; 
+} 
+              </code>
+            </pre>
+          </section>
+          <section id="id_selector">
+            <h3>ID Selector</h3>
+            <p>
+              The id selector uses the id attribute of an HTML element to select
+              a specific element. The id of an element is unique within a page,
+              so the id selector is used to select one unique element! To select
+              an element with a specific id, write a hash &#40;
+              <span class="highlight">&num;</span> &#41; character, followed by
+              the id of the element.
+            </p>
+            <h4>Syntax</h4>
+            <pre class="code-snippet">
+            <code ">
+<span class="code-snippet-selector">#id</span> {
+  css declarations;
+}
+            </code>
+            </pre>
+          </section>
+        </section>
+
+        <!-- Combinators Section -->
+        <section class="main-section" id="combinators">
+          <header>
+            <h2>Combinators</h2>
+          </header>
+          <p>
+            A CSS selector can contain more than one simple selector. Between
+            these selectors, one can include a combinator.
+          </p>
+          <p>There are four different combinators in CSS:</p>
+          <ol>
+            <li>
+              <a href="#descendant_selector"
+                >Descendant Selector</a
+              >
+            </li>
+            <li>
+              <a href="#direct_child_selector"
+                >Direct Child Selector</a
+              >
+            </li>
+            <li>
+              <a href="#adjacent_sibling_selector"
+                >Adjacent Sibling Selector</a
+              >
+            </li>
+            <li>
+              <a href="#general_sibling_selector"
+                >General Sibling Selector</a
+              >
+            </li>
+          </ol>
+          <section id="descendant_selector">
+            <h3>Descendant Selector</h3>
+            <p>
+              The descendant combinator, typically represented by a single
+              space character, combines two selectors such that elements
+              matched by the second selector are selected if they have an
+              ancestor element matching the first selector.
+            </p>
+            <h4>Syntax</h4>
+            <pre class="code-snippet">
+            <code>
+            
+<span class="code-snippet-selector">div p</span>  {
+  css declarations;
+}
+            </code>
+            </pre>
+          </section>
+          <section id="direct_child_selector">
+            <h3>Direct Child Selector</h3>
+            <p>
+              The direct child combinator &#40;
+              <span class="highlight">&gt;</span> &#41; is placed between two
+              CSS selectors. It  matches the elements of the
+              second selector that are the direct children of elements matched
+              by the first. It does not match descendent elements further down the document hierarchy.
+            </p>
+            <h4>Syntax</h4>
+            <pre class="code-snippet">
+            <code>
+<span class="code-snippet-selector">div > p</span> {
+  css declaration
+}
+            </code>
+            </pre>
+          </section>
+          <section id="adjacent_sibling_selector">
+            <h3>Adjacent Sibling Selector</h3>
+            <p>
+              The adjacent sibling selector &#40;
+              <span class="highlight">&plus;</span> &#41; is placed between two
+              CSS selectors. It returns only those elements matched by the
+              second selector that are the immediate sibling element of the first
+              selector.
+            </p>
+            <h4>Syntax</h4>
+            <pre class="code-snippet">
+            <code>
+<span class="code-snippet-selector">div + p</span> {
+  css declarations;
+}
+            </code>
+            </pre>
+          </section>
+          <section id="general_sibling_selector">
+            <h3>General Sibling Selector</h3>
+            <p>
+              The general sibling selector selects all elements that are
+              siblings of a specified element. If one wants to select siblings
+              of an element even if they are not directly adjacent, then the
+              general sibling combinator can be used &#40;
+              <span class="highlight">~</span> &#41;.
+            </p>
+            <h4>Syntax</h4>
+            <pre class="code-snippet">
+            <code>
+<span class="code-snippet-selector">div ~ p</span> {
+  css declarations;
+}              
+            </code>
+            </pre>
+          </section>
+        </section>
+
+        <!-- Pseudo Selectors -->
+        <section class="main-section" id="pseudo_selectors">
+          <header>
+            <h2>Pseudo Selectors</h2>
+          </header>
+          <section id="pseudo_classes">
+            <h3>Pseudo Classes</h3>
+            <p>
+              A CSS Pseudo Class is a keyword added to a selector that specifies
+              a special state of the selected element&#40;s&#41;. For example,
+              <span class="highlight">:hover</span> can be used to change a
+              button's color when the user's pointer hovers over it.
+            </p>
+            <p>
+              There are numerous Pseudo Classes, a list of the most common
+              will be provided in this documentation. Click the following link
+              to the
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+                target="_blank"
+                >MDN Pseudo Class Documentation</a
+              >
+              to see a complete list.
+            </p>
+            <h4>Syntax</h4>
+            <pre class="code-snippet">
+            <code>
+<span class="code-snippet-selector">selector:pseudo-class</span> {
+  css declarations; 
+}
+            </code>
+            </pre>
+            <table class="dp-table">
+              <caption>
+                Commonly Used Pseudo Classes
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Selector</th>
+                  <th scope="col">Example</th>
+                  <th scope="col">Example Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">:active</th>
+                  <td>a:active</td>
+                  <td>Selects the active link</td>
+                </tr>
+                <tr>
+                  <th scope="row">:checked</th>
+                  <td>input:checked</td>
+                  <td>Selects every checked input element</td>
+                </tr>
+                <tr>
+                  <th scope="row">:focus</th>
+                  <td>input:focus</td>
+                  <td>Selects the input element that has focus</td>
+                </tr>
+                <tr>
+                  <th scope="row">:hover</th>
+                  <td>a:hover</td>
+                  <td>Selects links on mouse over</td>
+                </tr>
+                <tr>
+                  <th scope="row">:first-child</th>
+                  <td>p:first-child</td>
+                  <td>
+                    Selects every p elements that is the first child of its
+                    parent
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">:first-of-type</th>
+                  <td>p:first-of-type</td>
+                  <td>
+                    Selects every p element that is the first p element of its
+                    parent
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">:link</th>
+                  <td>a:link</td>
+                  <td>Selects all unvisited links</td>
+                </tr>
+                <tr>
+                  <th scope="row">:nth-child(n)</th>
+                  <td>p:nth-child(2);</td>
+                  <td>
+                    Selects every p element that is the second child of its
+                    parent
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">:nth-of-type(n)</th>
+                  <td>p:nth-of-type(2)</td>
+                  <td>
+                    Selects every p element that is the second p element of its
+                    parent
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="pseudo_elements">
+            <h3>Pseudo Elements</h3>
+            <p>
+              A CSS pseudo-element is used to style specified parts of an element. There are numerous Pseudo Elements, a list of the most common will be provided in this documentation. Click the following link
+              to the <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements"
+                target="_blank"
+                >MDN Pseudo Elements Documentation</a
+              > to see a complete list. Pseudo Elements can be used to:
+            </p>
+            <ul>
+              <li>Style the first letter, or line, of an element.</li>
+              <li>
+                Insert content before, or after, the content of an element.
+              </li>
+            </ul>
+            <pre class="code-snippet">
+            <code>
+<span class="code-snippet-selector">selector::pseudo-element</span> {
+  css declarations;
+}
+            </code>
+            </pre>
+            <table class="dp-table">
+              <caption>
+                Commonly Used Pseudo Elements
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Selector</th>
+                  <th scope="col">Example</th>
+                  <th scope="col">Example Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">::after</th>
+                  <td>p::after</td>
+                  <td>Insert something after the content of each p element</td>
+                </tr>
+                <tr>
+                  <th scope="row">::before</th>
+                  <td>p::before</td>
+                  <td>Insert something after the content of each p element</td>
+                </tr>
+                <tr>
+                  <th scope="row">::first-letter</th>
+                  <td>p::first-letter/td></td>
+                  <td>Selects the first letter of each p element</td>
+                </tr>
+                <tr>
+                  <th scope="row">::first-line</th>
+                  <td>p::first-line</td>
+                  <td>Selects the first line of each p element</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <!-- References -->
+        <section class="main-section" id="references">
+          <header>
+            <h2>References</h2>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/" target="_blank">The Mozilla Developer</a></li>
+              <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+              <li><a href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a></li>
+            </ul>
+          </header>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

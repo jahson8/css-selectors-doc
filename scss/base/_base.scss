@@ -1,0 +1,43 @@
+/*Base Styles
+   ========================================================================== */
+/**
+ *
+ */
+
+/*Reset Border Box*/
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-size: 1em;
+  height: 100%;
+  line-height: $line-height;
+  color: $body-color;
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: serif;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:empty {
+  height: 40px;
+  background-color: red;
+}

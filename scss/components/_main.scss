@@ -1,0 +1,47 @@
+/*Main section styles
+   ========================================================================== */
+/**
+ *
+ */
+
+.main {
+  &-section {
+    padding: 3em 0;
+    border-bottom: 1px solid $complement;
+  }
+
+  &-section:last-child {
+    border-bottom: none;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    margin-left: 1em;
+  }
+
+  ol {
+    margin-left: 2em;
+  }
+
+  li {
+    margin-bottom: 1em;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $body-color;
+    &:focus {
+      outline: 3px solid #000;
+    }
+  }
+
+  @media (min-width: $large) {
+    margin-left: 345px;
+  }
+}

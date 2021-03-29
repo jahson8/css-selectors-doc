@@ -1,0 +1,35 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Weights
+
+$font-weight--normal: 400;
+$font-weight--bold: 700;
+
+// Descriptive Base Colors
+
+$white: #fff;
+$black: #0b0b0b;
+$gray: #edeff0;
+$body-color: #4b5658;
+
+// Color name
+$english-violet: #553663;
+
+// color usage
+$primary-color: $english-violet;
+$primary-color-light: #ddcee4;
+$primary-color-focus: #e8deed;
+
+$accent: #ecc30b;
+$complement: complement($english-violet);
+
+// Line-height
+$line-height: 1.5;
+
+// Box-shadow
+$br: 5px;
+
+// breakpoint
+$large: 64em;
