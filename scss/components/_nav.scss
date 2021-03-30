@@ -51,7 +51,11 @@
   }
 
   @media (max-width: $large) and (orientation: landscape) {
-    height: 85%;
+    height: 65%;
+
+    & > ul {
+      height: 70%;
+    }
   }
 
   @media (min-width: $large) {
@@ -61,8 +65,7 @@
     left: 0;
 
     & > ul {
-      overflow: auto;
-      height: 85%;
+      height: 80%;
     }
   }
 }

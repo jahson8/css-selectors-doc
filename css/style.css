@@ -323,7 +323,8 @@ body {
   height: 100%;
   line-height: 1.5;
   color: #4b5658;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  scroll-behavior: smooth; }
 
 h1,
 h2,
@@ -335,10 +336,6 @@ ol {
   margin: 0;
   padding: 0;
   list-style: none; }
-
-:empty {
-  height: 40px;
-  background-color: red; }
 
 /*Generic Container Styles
    ========================================================================== */
@@ -393,7 +390,9 @@ ol {
       outline: 2px solid #fff; }
   @media (max-width: 64em) and (orientation: landscape) {
     .nav {
-      height: 85%; } }
+      height: 65%; }
+      .nav > ul {
+        height: 70%; } }
   @media (min-width: 64em) {
     .nav {
       position: fixed;
@@ -401,8 +400,7 @@ ol {
       top: 0;
       left: 0; }
       .nav > ul {
-        overflow: auto;
-        height: 85%; } }
+        height: 80%; } }
 
 /*Main section styles
    ========================================================================== */
@@ -415,11 +413,10 @@ ol {
 .main-section:last-child {
   border-bottom: none; }
 .main ol {
-  list-style: decimal; }
+  list-style: decimal;
+  margin-left: 2em; }
 .main ul {
   margin-left: 1em; }
-.main ol {
-  margin-left: 2em; }
 .main li {
   margin-bottom: 1em; }
 .main li:last-child {
@@ -454,6 +451,11 @@ ol {
   font-size: 1.1rem;
   color: #2a3032; }
 
+/*Table Styles
+   ========================================================================== */
+/**
+ *
+ */
 .dp-table {
   width: 100%;
   border-collapse: collapse;
